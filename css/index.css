@@ -1,0 +1,96 @@
+/* CSS文件 */
+
+/* 全局限定 */
+body {
+  margin: 0; /* 清除浏览器默认边距 */
+  min-height: 100vh; /* 容器高度撑满屏幕 */
+  display: flex; /* 启用弹性盒子 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+}
+
+/* 设置外框大小及属性 */
+#exterior{
+	width: 450px;/* 必须设置宽度 */
+	height: 600px;/* 设置高度 */
+	border:4px solid black;/* 可视化边框 */
+	position: relative;/* 相对定位 */
+}
+
+/* 上边栏设定 */
+#navTop{
+	position: absolute;
+	width: 100%;
+	height: 20%;
+	top: 0%;
+	left: 0%;
+	border: 1px solid black;
+}
+
+/* 显示框设置 */
+#displayBar{
+    position: absolute;
+    width: 94%;
+    height: 80%;
+    top: 10%;
+    left: 3%;
+    border: 1px solid black;
+    font-size: 3em; /* 增大字体 */
+    text-align: right; /* 文字右对齐 */
+    padding-right: 10px; /* 右边距 */
+    overflow: hidden; /* 防止内容溢出 */
+    font-family: Arial, sans-serif; /* 设置字体 */
+    display: flex; /* 使用flex布局 */
+    align-items: center; /* 垂直居中 */
+    justify-content: flex-end; /* 内容右对齐 */
+}
+
+
+/* 显示框悬浮 */
+#displayBar:hover{
+	box-shadow: -1px -1px 1px 1px black inset;
+	cursor: pointer;
+}
+
+/* 下边栏限定 */
+#navBottom{
+	position: absolute;
+	width: 100%;
+	height: 80%;
+	top: 20%;
+	left: 0%;
+	border: 1px solid black;
+}
+
+/* 按键相对化 */
+#bar1,#bar2,#bar3,#bar4,#bar5{
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	text-align: center;
+	line-height: 80px;
+	margin-top: 10px;
+	margin-left: 20px;
+	border: 2px solid black;
+} 
+
+/* 等号键限定 */
+#bar6{
+	display: inline-block;
+	width: 185px;
+	height: 80px;
+	text-align: center;
+	line-height: 80px;
+	margin-top: 15px;
+	margin-left: 20px;
+	border: 2px solid black;
+}
+
+/* 按键悬浮处理 */
+#bar1:hover,#bar2:hover,#bar3:hover,#bar4:hover,#bar5:hover,#bar6:hover{
+	background-color: #ccc;
+	box-shadow: 1px 1px 1px 1px black;
+	cursor: pointer;
+	transition: all 0.5s ease;
+	transform: scale(1.1);
+}
